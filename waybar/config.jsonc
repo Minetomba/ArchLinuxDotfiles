@@ -1,0 +1,145 @@
+{
+	// Positioning
+	"reload_style_on_change": true,
+	"position": "top",
+	"mod": "dock",
+	"margin": 0,
+	"height": 30,
+
+	// Modules
+	"modules-left": [
+		"hyprland/workspaces",
+		"custom/separator",
+		"custom/menu",
+		// "custom/separator",
+		// "custom/apps",
+		// "custom/separator",
+		// "custom/btop",
+		"custom/separator",
+		// "custom/hyprsettings",
+		// "custom/separator",
+		"custom/bluetooth",
+		"custom/separator",
+		"wireplumber",
+		"custom/separator",
+		"wireplumber#microphone",
+		"custom/separator",
+		"custom/update"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"network",
+		"custom/separator",
+		"custom/vpn",
+		"custom/separator",
+		"battery",
+		"custom/separator",
+		"custom/power"
+	],
+
+	// Other Modules
+	"custom/separator": {
+		"format": "   "
+	},
+
+	// Left Modules
+	"hyprland/workspaces": {
+		"on-click": "activate",
+		"format": "{icon}",
+		"format-icons": {
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5",
+			"6": "6",
+			"7": "7",
+			"8": "8",
+			"9": "9",
+			"10": "10"
+		}
+	},
+	"custom/menu": {
+		"format": "Main Menu",
+		"on-click": "~/.config/waybar/scripts/main-menu.sh"
+	},
+	"custom/apps": {
+		"format": "Apps",
+		"on-click": "rofi -show drun"
+	},
+	"custom/btop": {
+		"format": "Open btop",
+		"on-click": "ghostty -e btop"
+	},
+	"custom/hyprsettings": {
+		"format": "Hyprland settings",
+		"on-click": "ghostty -e nano ~/.config/hypr/hyprland.conf"
+	},
+	"custom/bluetooth": {
+		"format": "Bluetooth {}",
+		"exec": "bluetoothctl devices Connected 2>/dev/null | grep -q '^Device ' && echo Connected || echo Disconnected",
+		"signal": 2,
+		"on-click": "~/.config/waybar/scripts/bluetooth.sh" // Or you can use bluetui by replacing this with "ghostty -e bluetui" and adding bluetui to the install script's pacman install command
+	},
+	"wireplumber": {
+		"node-type": "Audio/Sink",
+		"format": "{volume}% audio",
+		"format-muted": "muted audio",
+		"max-volume": 100.0,
+		"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-",
+		"on-click": "ghostty -e pavucontrol"
+	},
+	"wireplumber#microphone": {
+		"node-type": "Audio/Source",
+		"format": "{volume}% microphone",
+		"format-muted": "muted microphone",
+		"max-volume": 100.0,
+		"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%+",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%-",
+		"on-click": "ghostty -e pavucontrol"
+	},
+	"custom/update": {
+		"format": "{}",
+		"exec": "checkupdates 2>/dev/null | grep -q . && echo \"Update\" || echo \"\"",
+		"interval": 60,
+		"on-click": "ghostty -e sudo pacman -Syyu"
+	},
+
+	// Center Module
+	"clock": {
+		"format": "{:%H:%M:%S %d.%m.%y}",
+		"interval": 1,
+		"on-click": "~/.config/waybar/scripts/timezones.sh"
+	},
+
+	// Right Modules
+	"network": {
+		"format-wifi": "{essid} SSID {signalStrength}% strength",
+		"format-ethernet": "{ifname}",
+		"format-disconnected": "Disconnected",
+		"on-click": "~/.config/waybar/scripts/wifi.sh" // Or you can use "ghostty -e impala" if you add "impala" to the initial pacman install command in the installation script
+	},
+	"custom/vpn": {
+		"format": "VPN {}",
+		"exec": "ip link show wg0 2>/dev/null | grep -q 'wg0:' && echo \"On\" || echo \"Off\"",
+		"signal": 1,
+		"on-click": "ghostty -e ~/.config/waybar/scripts/vpn-toggle.sh"
+	},
+	"battery": {
+		"states": {
+			"warning": 10,
+			"critical": 5
+		},
+		"format": "{capacity}% battery",
+		"format-charging": "{capacity}% charging",
+		"format-plugged": "{capacity}% plugged",
+		"on-click": "~/.config/waybar/scripts/power-profiles.sh"
+	},
+	"custom/power": {
+		"format": "Power Menu",
+		"on-click": "~/.config/waybar/scripts/power-menu.sh"
+	}
+}
