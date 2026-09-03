@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # If not running in interactive mode, do nothing
 [[ $- != *i* ]] && return
 

@@ -4,7 +4,7 @@
 # Also, please run "sudo pacman -Syyu" before this and make sure you're connected to the internet
 
 # Install packages
-sudo pacman -S --needed python file busctl curl ffmpeg pavucontrol vim git at hyprlock playerctl wf-recorder power-profiles-daemon swaybg bc nerd-fonts libnotify ttf-roboto iwd iw bluez bluez-utils pipewire wireplumber hyprland waybar mako polkit-gnome ghostty gnome-calculator fzf grim slurp wl-clipboard btop hyprpicker brightnessctl wireguard-tools pipewire-pulse pacman-contrib rofimoji rofi
+sudo pacman -S --needed python file less busctl curl ffmpeg pavucontrol vim git at hyprlock playerctl wf-recorder power-profiles-daemon swaybg bc nerd-fonts libnotify ttf-roboto iwd iw bluez bluez-utils pipewire wireplumber hyprland waybar mako polkit-gnome ghostty gnome-calculator fzf grim slurp wl-clipboard btop hyprpicker brightnessctl wireguard-tools pipewire-pulse pacman-contrib rofimoji rofi
 
 # Systemctl services
 sudo systemctl enable --now atd

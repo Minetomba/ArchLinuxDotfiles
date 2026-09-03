@@ -90,7 +90,7 @@
 		"max-volume": 100.0,
 		"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+",
 		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-",
-		"on-click": "ghostty -e pavucontrol"
+		"on-click": "pavucontrol"
 	},
 	"wireplumber#microphone": {
 		"node-type": "Audio/Source",
@@ -99,7 +99,7 @@
 		"max-volume": 100.0,
 		"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%+",
 		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%-",
-		"on-click": "ghostty -e pavucontrol"
+		"on-click": "pavucontrol"
 	},
 	"custom/update": {
 		"format": "{}",
