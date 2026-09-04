@@ -9,7 +9,7 @@ case "$action" in
         ghostty -e sudo nano /etc/wireguard/wg0.conf
     ;;
     Hyprland\ Settings)
-        ghostty -e nano ~/.config/hypr/hyprland.conf
+        ghostty -e nano ~/.config/hypr/hyprland.lua
     ;;
     Hyprlock\ Settings)
         ghostty -e nano ~/.config/hypr/hyprlock.conf

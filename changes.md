@@ -1,9 +1,3 @@
-- Hyprland's config's ALT + XF86AudioRaiseVolume keybinding was decreasing volume by 1% rather than increasing it by 1%, now it's fixed.
-- Hyprland's config's XF86AudioMute keybinding was setting volume to 0% rather than toggling it, now it's fixed.
-- Created a changes.md file.
-- The true minimum of screen brightness is 0%, not 1%. The SHIFT + XF86MonBrightnessDown keybind now goes down to 0%, rather than 1%.
-- Added "less", a dependency of "git diff", to install.sh's initial package download command.
-- Pavucontrol is a GUI application, not TUI, and waybar's on click events for the microphone/audio modules were opening a ghostty terminal to run it. Now waybar itself runs pavucontrol rather than opening a new terminal.
-- Added helper scripts for git.
-- Added shebang to bashrc, and made it executable.
-- Originally, screenshotting was done using only the PRINT key, but now "Main Menu > Trigger > Screenshot" can triger a screenshot too.
+- Migrated hyprland.conf to hyprland.lua via hyprconf2lua, and made waybar/config.jsonc and waybar/scripts/settings.sh use hyprland.lua rather than hyprland.conf. This is to make sure nothing breaks when the hyprland update to remove hyprlang hits.
+- Removed "reveal active window on top" keybindings.
+- Removed keybindings to resize windows (must be done with touchpad/mouse now).
