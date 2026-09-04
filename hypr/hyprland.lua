@@ -132,7 +132,7 @@ hl.bind("SUPER + ALT + 5", hl.dsp.group.next({ forward = false })) -- NOT WRITTE
 hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd("~/.config/waybar/scripts/main-menu.sh"))
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind("SUPER + Q", hl.dsp.exec_cmd("ghostty"))
-hl.bind("SUPER + CTRL + E", hl.dsp.exec_cmd("rofimoji --action print | wl-copy"))
+hl.bind("SUPER + CTRL + E", hl.dsp.exec_cmd("rofimoji --action print | tr -d '\n' | wl-copy"))
 hl.bind("XF86PowerOff", hl.dsp.exec_cmd("~/.config/waybar/scripts/power-menu.sh"), { locked = true })
 
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("gnome-calculator"))

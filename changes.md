@@ -1,3 +1,1 @@
-- Added a bash script to do a git rebase.
-- Renamed "git_tools" to "development_tools".
-- Made install.sh make git use nano for everything.
+- Fixed a bug where when taking an emoji from rofimoji it added a newline automatically.

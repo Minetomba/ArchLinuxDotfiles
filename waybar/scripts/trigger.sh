@@ -12,7 +12,7 @@ case "$action" in
         ~/.config/waybar/scripts/reminder.sh
     ;;
     Emojis)
-        rofimoji --action print | wl-copy
+        rofimoji --action print | tr -d '\n' | wl-copy
     ;;
     Record)
         ~/.config/waybar/scripts/screenrecorder.sh
