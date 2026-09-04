@@ -1,7 +1,3 @@
-- Fixed the audio mute toggle issue in hyprland.lua by changing "set-volume" to "set-mute" in the wpctl command.
-- Added a keybindings menu.
-- Removed a few duplicate keybindings.
-- Added logind configuration to the install script.
-- Made a new helper script for git to show the entire history of this project.
-- Made a new helper script for git to show the commits and their hashes.
-- Made a special git_tools directory and changed the scripts to use ".." rather than ".".
+- Added a bash script to do a git rebase.
+- Renamed "git_tools" to "development_tools".
+- Made install.sh make git use nano for everything.

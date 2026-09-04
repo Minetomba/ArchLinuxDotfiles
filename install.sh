@@ -15,6 +15,9 @@ systemctl --user enable --now pipewire pipewire-pulse
 # Make logind configuration
 sudo cp logind/logind.conf /etc/systemd/logind.conf
 
+# Make git use nano for everything
+git config --global core.editor nano
+
 # Make sure the waybar scripts are executable
 sudo chmod +x ./waybar/scripts/*
 
