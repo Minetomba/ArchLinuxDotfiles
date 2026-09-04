@@ -145,7 +145,7 @@ hl.bind("SUPER + CTRL + COMMA", hl.dsp.exec_cmd("makoctl mode | grep -q \"do-not
 hl.bind("SUPER + ALT + COMMA", hl.dsp.exec_cmd("makoctl invoke"))
 hl.bind("SUPER + SHIFT + ALT + COMMA", hl.dsp.exec_cmd("makoctl restore"))
 
-hl.bind("PRINT", hl.dsp.exec_cmd("grim -g \"$(slurp)\" ~/Pictures/screenshot_$(date +%s).png"))
+hl.bind("PRINT", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | wl-copy --type image/png && notify-send \"Screenshot\" \"Screenshot copied to clipboard\""))
 hl.bind("SUPER + PRINT", hl.dsp.exec_cmd("pkill hyprpicker || hyprpicker -a"))
 hl.bind("ALT + PRINT", hl.dsp.exec_cmd("~/.config/waybar/scripts/screenrecorder.sh"))
 

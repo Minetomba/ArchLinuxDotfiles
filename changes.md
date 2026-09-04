@@ -1,1 +1,1 @@
-- Fixed a bug where when taking an emoji from rofimoji it added a newline automatically.
+- Made screenshotting copy the made image and send a notification, and not save the file.

@@ -18,7 +18,6 @@ case "$action" in
         ~/.config/waybar/scripts/screenrecorder.sh
     ;;
     Screenshot)
-        grim -g "$(slurp)" ~/Pictures/screenshot_$(date +%s).png
-        notify-send "Screenshot" "Screenshot saved as screenshot_$(date +%s).png in ~/Pictures/"
+        grim -g "$(slurp)" - | wl-copy --type image/png && notify-send "Screenshot" "Screenshot copied to clipboard"
     ;;
 esac
