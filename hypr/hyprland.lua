@@ -7,7 +7,7 @@
 
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), { locked = true })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
 hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), { locked = true })
 
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +5%"), { locked = true })
@@ -42,8 +42,8 @@ hl.bind("SUPER + P", hl.dsp.window.pseudo()) -- dwindle
 hl.bind("SUPER + T", hl.dsp.window.float())
 
 hl.bind("SUPER + F", hl.dsp.window.fullscreen())
-hl.bind("SUPER + CTRL + F", hl.dsp.window.fullscreen_state({ internal = 0, client = 2 }))
-hl.bind("SUPER + ALT + F", hl.dsp.window.fullscreen())
+-- hl.bind("SUPER + CTRL + F", hl.dsp.window.fullscreen_state({ internal = 0, client = 2 }))
+-- hl.bind("SUPER + ALT + F", hl.dsp.window.fullscreen())
 
 hl.bind("SUPER + LEFT", hl.dsp.focus({ direction = "left" }))
 hl.bind("SUPER + RIGHT", hl.dsp.focus({ direction = "right" }))
@@ -84,7 +84,7 @@ hl.bind("SUPER + SHIFT + ALT + 9", hl.dsp.window.move({ workspace = 9 , follow =
 hl.bind("SUPER + SHIFT + ALT + 0", hl.dsp.window.move({ workspace = 10 , follow = false}))
 
 hl.bind("SUPER + S", hl.dsp.workspace.toggle_special("scratchpad"))
-hl.bind("SUPER + ALT + S", hl.dsp.window.move({ workspace = "special:scratchpad" , follow = false}))
+hl.bind("SUPER + SHIFT + S", hl.dsp.window.move({ workspace = "special:scratchpad" , follow = false}))
 
 hl.bind("SUPER + TAB", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("SUPER + SHIFT + TAB", hl.dsp.focus({ workspace = "e-1" }))
@@ -103,32 +103,29 @@ hl.bind("SUPER + SHIFT + DOWN", hl.dsp.window.swap({ direction = "down" }))
 hl.bind("ALT + TAB", hl.dsp.window.cycle_next())
 hl.bind("ALT + SHIFT + TAB", hl.dsp.window.cycle_next({ next = false }))
 
-hl.bind("CTRL + ALT + TAB", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("CTRL + ALT + SHIFT + TAB", hl.dsp.focus({ workspace = "e-1" }))
-
-hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
-hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
+hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e+1" })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e-1" })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true }) -- NOT WRITTEN IN KEYBINDINGS
 
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
-hl.bind("SUPER + G", hl.dsp.group.toggle())
-hl.bind("SUPER + ALT + G", hl.dsp.window.move({ out_of_group = true }))
-hl.bind("SUPER + ALT + LEFT", hl.dsp.window.move({ into_group = "left" }))
-hl.bind("SUPER + ALT + RIGHT", hl.dsp.window.move({ into_group = "right" }))
-hl.bind("SUPER + ALT + UP", hl.dsp.window.move({ into_group = "up" }))
-hl.bind("SUPER + ALT + DOWN", hl.dsp.window.move({ into_group = "down" }))
-hl.bind("SUPER + ALT + TAB", hl.dsp.group.next())
-hl.bind("SUPER + ALT + SHIFT + TAB", hl.dsp.group.next({ forward = false }))
-hl.bind("SUPER + CTRL + LEFT", hl.dsp.group.next({ forward = false }))
-hl.bind("SUPER + CTRL + RIGHT", hl.dsp.group.next())
-hl.bind("SUPER + ALT + mouse_down", hl.dsp.group.next())
-hl.bind("SUPER + ALT + mouse_up", hl.dsp.group.next({ forward = false }))
-hl.bind("SUPER + ALT + 1", hl.dsp.group.next({ forward = false }))
-hl.bind("SUPER + ALT + 2", hl.dsp.group.next({ forward = false }))
-hl.bind("SUPER + ALT + 3", hl.dsp.group.next({ forward = false }))
-hl.bind("SUPER + ALT + 4", hl.dsp.group.next({ forward = false }))
-hl.bind("SUPER + ALT + 5", hl.dsp.group.next({ forward = false }))
+hl.bind("SUPER + G", hl.dsp.group.toggle()) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + G", hl.dsp.window.move({ out_of_group = true })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + LEFT", hl.dsp.window.move({ into_group = "left" })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + RIGHT", hl.dsp.window.move({ into_group = "right" })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + UP", hl.dsp.window.move({ into_group = "up" })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + DOWN", hl.dsp.window.move({ into_group = "down" })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + TAB", hl.dsp.group.next()) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + SHIFT + TAB", hl.dsp.group.next({ forward = false })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + CTRL + LEFT", hl.dsp.group.next({ forward = false })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + CTRL + RIGHT", hl.dsp.group.next()) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + mouse_down", hl.dsp.group.next()) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + mouse_up", hl.dsp.group.next({ forward = false })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + 1", hl.dsp.group.next({ forward = false })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + 2", hl.dsp.group.next({ forward = false })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + 3", hl.dsp.group.next({ forward = false })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + 4", hl.dsp.group.next({ forward = false })) -- NOT WRITTEN IN KEYBINDINGS
+hl.bind("SUPER + ALT + 5", hl.dsp.group.next({ forward = false })) -- NOT WRITTEN IN KEYBINDINGS
 
 -- Utility Bindings
 

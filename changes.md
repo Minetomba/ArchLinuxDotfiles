@@ -1,3 +1,7 @@
-- Migrated hyprland.conf to hyprland.lua via hyprconf2lua, and made waybar/config.jsonc and waybar/scripts/settings.sh use hyprland.lua rather than hyprland.conf. This is to make sure nothing breaks when the hyprland update to remove hyprlang hits.
-- Removed "reveal active window on top" keybindings.
-- Removed keybindings to resize windows (must be done with touchpad/mouse now).
+- Fixed the audio mute toggle issue in hyprland.lua by changing "set-volume" to "set-mute" in the wpctl command.
+- Added a keybindings menu.
+- Removed a few duplicate keybindings.
+- Added logind configuration to the install script.
+- Made a new helper script for git to show the entire history of this project.
+- Made a new helper script for git to show the commits and their hashes.
+- Made a special git_tools directory and changed the scripts to use ".." rather than ".".

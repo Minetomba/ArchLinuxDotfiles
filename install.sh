@@ -12,6 +12,9 @@ sudo systemctl enable --now iwd
 sudo systemctl enable --now bluetooth
 systemctl --user enable --now pipewire pipewire-pulse
 
+# Make logind configuration
+sudo cp logind/logind.conf /etc/systemd/logind.conf
+
 # Make sure the waybar scripts are executable
 sudo chmod +x ./waybar/scripts/*
 

@@ -1,4 +1,4 @@
-@theme "/usr/share/rofi/themes/gruvbox-dark-hard"
+@theme "/usr/share/rofi/themes/android_notification"
 configuration {
     opacity: 80;
 }
