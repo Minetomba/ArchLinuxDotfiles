@@ -1,1 +1,2 @@
-- Made screenshotting copy the made image and send a notification, and not save the file.
+- Vim replaced nano.
+- Added the day of the week to the "clock" module in waybar.
