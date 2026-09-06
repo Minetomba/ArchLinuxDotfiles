@@ -1,2 +1,1 @@
-- Vim replaced nano.
-- Added the day of the week to the "clock" module in waybar.
+- Added colors to battery states, orange for "warning", red for "critical".
