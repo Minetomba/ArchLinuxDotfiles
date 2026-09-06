@@ -1,1 +1,3 @@
-- Added colors to battery states, orange for "warning", red for "critical".
+- Added a login manager for TTY 1.
+- Added an installer for that login manager.
+- Made the main installer also execute the installer of the login manager.
