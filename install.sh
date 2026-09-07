@@ -4,7 +4,7 @@
 # Also, please run "sudo pacman -Syyu" before this and make sure you're connected to the internet
 
 # Install packages
-sudo pacman -S --needed python file less busctl curl ffmpeg pavucontrol vim git at hyprlock playerctl wf-recorder power-profiles-daemon swaybg bc nerd-fonts libnotify ttf-roboto iwd iw bluez bluez-utils pipewire wireplumber hyprland waybar mako polkit-gnome ghostty gnome-calculator fzf grim slurp wl-clipboard btop hyprpicker brightnessctl wireguard-tools pipewire-pulse pacman-contrib rofimoji rofi
+sudo pacman -S --needed python nano wofi file less gcc pam busctl curl ffmpeg pavucontrol vim git at hyprlock playerctl wf-recorder power-profiles-daemon swaybg bc nerd-fonts libnotify ttf-roboto iwd iw bluez bluez-utils pipewire wireplumber hyprland waybar mako polkit-gnome ghostty gnome-calculator fzf grim slurp wl-clipboard btop hyprpicker brightnessctl wireguard-tools pipewire-pulse pacman-contrib rofimoji
 
 # Systemctl services
 sudo systemctl enable --now atd
@@ -21,9 +21,6 @@ git config --global core.editor vim
 # Make sure the waybar scripts are executable
 sudo chmod +x ./waybar/scripts/*
 
-# Make the "Pictures" directory for screenshot storage
-sudo mkdir -p ~/Pictures
-
 # Make the "Videos" directory for recordings storage
 sudo mkdir -p ~/Videos
 
@@ -37,13 +34,13 @@ sudo mkdir -p ~/.config
 sudo rm -rf ~/.config/hypr
 sudo rm -rf ~/.config/waybar
 sudo rm -rf ~/.config/ghostty
-sudo rm -rf ~/.config/rofi
+sudo rm -rf ~/.config/wofi
 sudo rm -rf ~/.config/mako
 
 sudo cp -r hypr ~/.config/hypr
 sudo cp -r waybar ~/.config/waybar
 sudo cp -r ghostty ~/.config/ghostty
-sudo cp -r rofi ~/.config/rofi
+sudo cp -r wofi ~/.config/wofi
 sudo cp -r mako ~/.config/mako
 
 # Own the home directory
@@ -56,3 +53,5 @@ sudo usermod -a -G input $USER
 cd login-cli
 ./compile.sh
 ./install.sh
+
+echo "Install complete!"

@@ -1,3 +1,3 @@
-- Added a login manager for TTY 1.
-- Added an installer for that login manager.
-- Made the main installer also execute the installer of the login manager.
+- The timezone.sh script was requesting sudo password, and so now everything that uses it opens a terminal along with it.
+- Moved the timezone configuration option from the main menu to the settings menu.
+- Migrated rofi to wofi.

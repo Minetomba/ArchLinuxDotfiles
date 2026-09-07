@@ -9,7 +9,7 @@ if [ ${#devices[@]} -eq 0 ]; then
 	exit 1
 fi
 
-device_to_use=$(printf "%s\n" "${devices[@]}" | rofi -dmenu -i -p "Select Network Device")
+device_to_use=$(printf "%s\n" "${devices[@]}" | wofi --dmenu --prompt "Select Network Device")
 if [ -z "$device_to_use" ]; then
 	exit 1
 fi
@@ -19,7 +19,7 @@ if ! iwctl station "$device_to_use" scan >/dev/null 2>&1; then
 	exit 1
 fi
 
-action=$(echo -e "Connect\nDisconnect\nCancel" | rofi -dmenu -i -p "Action")
+action=$(echo -e "Connect\nDisconnect\nCancel" | wofi --dmenu --prompt "Action")
 if [ -z "$action" ]; then
 	exit 1
 fi
@@ -43,16 +43,15 @@ case "$action" in
 			exit 1
 		fi
 
-		target_network=$(printf '%s\n' "${networks[@]}" | rofi -dmenu -i -p "Select WiFi Network")
+		target_network=$(printf '%s\n' "${networks[@]}" | wofi --dmenu --prompt "Select WiFi Network")
 		if [ -z "$target_network" ]; then
 			exit 1
 		fi
 		
-		rofi -dmenu -password -p "WiFi Password" | iwctl station "$device_to_use" connect "$target_network"
+		wofi --dmenu --password --prompt "WiFi Password (none if open)" | xargs iwctl station "$device_to_use" connect "$target_network" --password
 	;;
 	"Disconnect")
 		iwctl station "$device_to_use" disconnect
 		notify-send "Network" "Disconnected $device_to_use"
 	;;
-	exit 0
 esac

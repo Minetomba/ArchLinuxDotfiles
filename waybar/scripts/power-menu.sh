@@ -1,5 +1,5 @@
 #!/bin/bash
-action=$(echo -e "Lock\nLog out\nReboot\nPower off" | rofi -dmenu -i -p "Action")
+action=$(echo -e "Lock\nLog out\nReboot\nPower off" | wofi --dmenu --prompt "Action")
 if [ -z "$action" ]; then
 	exit 1
 fi

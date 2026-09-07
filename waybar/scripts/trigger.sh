@@ -1,5 +1,5 @@
 #!/bin/bash
-action=$(echo -e "Toggle Wireguard\nReminder\nEmojis\nRecord\nScreenshot" | rofi -dmenu -i -p "Action")
+action=$(echo -e "Toggle Wireguard\nReminder\nEmojis\nRecord\nScreenshot" | wofi --dmenu --prompt "Action")
 if [ -z "$action" ]; then
 	exit 1
 fi
@@ -12,7 +12,7 @@ case "$action" in
         ~/.config/waybar/scripts/reminder.sh
     ;;
     Emojis)
-        rofimoji --action print | tr -d '\n' | wl-copy
+        rofimoji --selector wofi --action print | tr -d '\n' | wl-copy
     ;;
     Record)
         ~/.config/waybar/scripts/screenrecorder.sh

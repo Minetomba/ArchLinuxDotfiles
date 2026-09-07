@@ -67,7 +67,7 @@
 	},
 	"custom/apps": {
 		"format": "Apps",
-		"on-click": "rofi -show drun"
+		"on-click": "wofi --show drun"
 	},
 	"custom/btop": {
 		"format": "Open btop",
@@ -112,7 +112,7 @@
 	"clock": {
 		"format": "{:%H:%M:%S %d.%m.%y %a}",
 		"interval": 1,
-		"on-click": "~/.config/waybar/scripts/timezones.sh"
+		"on-click": "ghostty -e ~/.config/waybar/scripts/timezones.sh"
 	},
 
 	// Right Modules

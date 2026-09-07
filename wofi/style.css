@@ -1,0 +1,43 @@
+window {
+    margin: 0px;
+    border: 2px solid #808080;
+    border-radius: 0px;
+    background-color: #000000;
+    font-family: "JetBrains Mono", "Noto Sans", sans-serif;
+    font-size: 16px;
+}
+#input {
+    margin: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    padding: 5px;
+    background-color: #ffffff;
+}
+#prompt {
+    padding: 6px 12px;
+    margin-right: 5px;
+    border-radius: 0px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+}
+#entry {
+    padding: 10px;
+    color: #ffffff;
+}
+#scroll {
+    margin: 5px 10px 10px 10px;
+}
+
+#text {
+    margin: 5px;
+    color: #ffffff;
+}
+#entry:selected {
+    background-color: #ffffff;
+    border-radius: 0px;
+}
+#entry:selected #text {
+    color: #000000;
+    font-weight: bold;
+}

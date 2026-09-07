@@ -62,7 +62,7 @@ if [[ -z "$menu" ]]; then
 	notify-send "Bluetooth" "No devices found."
 	exit 1
 fi
-selection=$(printf '%s' "$menu" | rofi -dmenu -i -p "Bluetooth" --reverse)
+selection=$(printf '%s' "$menu" | tac | wofi --dmenu --prompt "Bluetooth")
 [[ -z "$selection" ]] && exit 0
 mac="${entries[$selection]}"
 if [[ -z "$mac" ]]; then
