@@ -1,3 +1,2 @@
-- Added a "SUPER + R" keybinding to open the reminder menu quickly.
-- Fixed the bug where the startup text was showing over the login menu (now it waits 1 second before running).
-- Fixed the bugs where wofi was not showing the prompt text in the reminder menu.
+- Changed all indentation to be tabs.
+- Fixed the issue where mouse acceleration activated randomly, whereas now it is disabled completely.

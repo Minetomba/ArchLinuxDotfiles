@@ -5,7 +5,7 @@ if [ -z "$action" ]; then
 fi
 sleep 0.1
 case "$action" in
-    Pacman\ Packages)
-        pacman -Ssq | wofi --dmenu --prompt "Packages" | xargs -r -o sudo pacman -S
-    ;;
+	Pacman\ Packages)
+		pacman -Ssq | wofi --dmenu --prompt "Packages" | xargs -r -o sudo pacman -S
+	;;
 esac

@@ -5,16 +5,16 @@ if [ -z "$action" ]; then
 fi
 sleep 0.1
 case "$action" in
-    Lock)
-        hyprlock
-    ;;
-    Log\ out)
-        loginctl terminate-session $(loginctl session-status | head -1 | awk '{print $1}')
-    ;;
-    Power\ off)
-        systemctl poweroff
-    ;;
-    Reboot)
-        reboot
-    ;;
+	Lock)
+		hyprlock
+	;;
+	Log\ out)
+		loginctl terminate-session $(loginctl session-status | head -1 | awk '{print $1}')
+	;;
+	Power\ off)
+		systemctl poweroff
+	;;
+	Reboot)
+		reboot
+	;;
 esac

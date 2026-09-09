@@ -1,8 +1,8 @@
 #!/bin/bash
 mapfile -t devices < <(
-    for d in /sys/class/net/*; do
-        [ -d "$d/wireless" ] && basename "$d"
-    done
+	for d in /sys/class/net/*; do
+		[ -d "$d/wireless" ] && basename "$d"
+	done
 )
 if [ ${#devices[@]} -eq 0 ]; then
 	notify-send "Network" "No network devices found"

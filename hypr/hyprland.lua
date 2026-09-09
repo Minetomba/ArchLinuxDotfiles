@@ -166,9 +166,9 @@ hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 
 hl.config({
-    xwayland = {
-        force_zero_scaling = true,
-    },
+	xwayland = {
+		force_zero_scaling = true,
+	},
 })
 
 -- Display
@@ -176,54 +176,56 @@ hl.config({
 hl.env("GDK_SCALE", 2)
 
 hl.monitor({
-    output   = "",
-    mode     = "preferred",
-    position = "auto",
-    scale    = 1.4,
+	output   = "",
+	mode	 = "preferred",
+	position = "auto",
+	scale	= 1.4,
 })
 
 -- Input
 
 hl.config({
-    input = {
-        kb_layout = "us",
-        kb_options = "capslock:caps",
-        repeat_rate = 40,
-        repeat_delay = 600,
-        numlock_by_default = true,
-        sensitivity = 0.4,
-        touchpad = {
-            natural_scroll = true,
-            clickfinger_behavior = true,
-            scroll_factor = 0.4,
-        },
-    },
+	input = {
+		kb_layout = "us",
+		kb_options = "capslock:caps",
+		repeat_rate = 40,
+		repeat_delay = 600,
+		numlock_by_default = true,
+		sensitivity = 0.4,
+		accel_profile = "flat",
+		force_no_accel = true,
+		touchpad = {
+			natural_scroll = true,
+			clickfinger_behavior = true,
+			scroll_factor = 0.4,
+		},
+	},
 })
 
 -- Terminal Scrolling
 
 hl.window_rule({
-    name  = "scroll_touchpad_1_5_204",
-    match = {
-        class = "(Alacritty|kitty|foot)",
-    },
-    scroll_touchpad = 1.5,
+	name  = "scroll_touchpad_1_5_204",
+	match = {
+		class = "(Alacritty|kitty|foot)",
+	},
+	scroll_touchpad = 1.5,
 })
 
 hl.window_rule({
-    name  = "scroll_touchpad_0_2_205",
-    match = {
-        class = "com.mitchellh.ghostty",
-    },
-    scroll_touchpad = 0.2,
+	name  = "scroll_touchpad_0_2_205",
+	match = {
+		class = "com.mitchellh.ghostty",
+	},
+	scroll_touchpad = 0.2,
 })
 
 -- Enable touchpad gestures for changing workspaces
 
 hl.gesture({
-    ["fingers"] = 3,
-    ["direction"] = "horizontal",
-    ["action"] = "workspace",
+	["fingers"] = 3,
+	["direction"] = "horizontal",
+	["action"] = "workspace",
 })
 
 -- General Aesthetics
@@ -233,95 +235,95 @@ local activeBorderColor = "rgba(0099ffaa) rgba(964b00aa) 45deg"
 local inactiveBorderColor = "rgba(004d80aa) rgba(4b2600aa) 45deg"
 
 hl.config({
-    general = {
-        gaps_in = 0,
-        gaps_out = 0,
-        border_size = 2,
-        resize_on_border = false,
-        allow_tearing = false,
-        layout = "dwindle",
-        col = {
-            active_border = { colors = { "rgba(0099ffaa)", "rgba(964b00aa)" }, angle = 45 },
-            inactive_border = { colors = { "rgba(004d80aa)", "rgba(4b2600aa)" }, angle = 45 },
-        },
-    },
+	general = {
+		gaps_in = 0,
+		gaps_out = 0,
+		border_size = 2,
+		resize_on_border = false,
+		allow_tearing = false,
+		layout = "dwindle",
+		col = {
+			active_border = { colors = { "rgba(0099ffaa)", "rgba(964b00aa)" }, angle = 45 },
+			inactive_border = { colors = { "rgba(004d80aa)", "rgba(4b2600aa)" }, angle = 45 },
+		},
+	},
 })
 
 hl.config({
-    decoration = {
-        rounding = 0,
-        shadow = {
-            enabled = true,
-            range = 2,
-            render_power = 3,
-            color = "rgba(1a1a1aee)",
-        },
-        blur = {
-            enabled = false,
-            size = 2,
-            passes = 2,
-            special = true,
-            brightness = 0.60,
-            contrast = 0.75,
-        },
-    },
+	decoration = {
+		rounding = 0,
+		shadow = {
+			enabled = true,
+			range = 2,
+			render_power = 3,
+			color = "rgba(1a1a1aee)",
+		},
+		blur = {
+			enabled = false,
+			size = 2,
+			passes = 2,
+			special = true,
+			brightness = 0.60,
+			contrast = 0.75,
+		},
+	},
 })
 
 hl.config({
-    group = {
-        groupbar = {
-            font_size = 12,
-            font_family = "monospace",
-            font_weight_active = "ultraheavy",
-            font_weight_inactive = "normal",
-            indicator_height = 0,
-            indicator_gap = 5,
-            height = 22,
-            gaps_in = 5,
-            gaps_out = 0,
-            text_color = "rgb(ffffff)",
-            text_color_inactive = "rgba(ffffff90)",
-            col = {
-                active = "rgba(00000040)",
-                inactive = "rgba(00000020)",
-            },
-            gradients = true,
-            gradient_rounding = 0,
-            gradient_round_only_edges = false
-        },
-        col = {
-            border_active = { colors = { "rgba(0099ffaa)", "rgba(964b00aa)" }, angle = 45 },
-            border_inactive = { colors = { "rgba(004d80aa)", "rgba(4b2600aa)" }, angle = 45 },
-            border_locked_active = { colors = { "rgba(0099ffaa)", "rgba(964b00aa)" }, angle = 45 },
-            border_locked_inactive = { colors = { "rgba(004d80aa)", "rgba(4b2600aa)" }, angle = 45 },
-        }
-    }
+	group = {
+		groupbar = {
+			font_size = 12,
+			font_family = "monospace",
+			font_weight_active = "ultraheavy",
+			font_weight_inactive = "normal",
+			indicator_height = 0,
+			indicator_gap = 5,
+			height = 22,
+			gaps_in = 5,
+			gaps_out = 0,
+			text_color = "rgb(ffffff)",
+			text_color_inactive = "rgba(ffffff90)",
+			col = {
+				active = "rgba(00000040)",
+				inactive = "rgba(00000020)",
+			},
+			gradients = true,
+			gradient_rounding = 0,
+			gradient_round_only_edges = false
+		},
+		col = {
+			border_active = { colors = { "rgba(0099ffaa)", "rgba(964b00aa)" }, angle = 45 },
+			border_inactive = { colors = { "rgba(004d80aa)", "rgba(4b2600aa)" }, angle = 45 },
+			border_locked_active = { colors = { "rgba(0099ffaa)", "rgba(964b00aa)" }, angle = 45 },
+			border_locked_inactive = { colors = { "rgba(004d80aa)", "rgba(4b2600aa)" }, angle = 45 },
+		}
+	}
 })
 
 hl.config({
-    animations = {
-        enabled = true -- or false
-    },
+	animations = {
+		enabled = true -- or false
+	},
 })
 hl.curve("easeOutQuint", {
-    type = "bezier",
-    points = { { 0.23, 1 }, { 0.32, 1 } },
+	type = "bezier",
+	points = { { 0.23, 1 }, { 0.32, 1 } },
 })
 hl.curve("easeInOutCubic", {
-    type = "bezier",
-    points = { { 0.65, 0.05 }, { 0.36, 1 } },
+	type = "bezier",
+	points = { { 0.65, 0.05 }, { 0.36, 1 } },
 })
 hl.curve("linear", {
-    type = "bezier",
-    points = { { 0, 0 }, { 1, 1 } },
+	type = "bezier",
+	points = { { 0, 0 }, { 1, 1 } },
 })
 hl.curve("almostLinear", {
-    type = "bezier",
-    points = { { 0.5, 0.5 }, { 0.75, 1.0 } },
+	type = "bezier",
+	points = { { 0.5, 0.5 }, { 0.75, 1.0 } },
 })
 hl.curve("quick", {
-    type = "bezier",
-    points = { { 0.15, 0 }, { 0.1, 1 } },
+	type = "bezier",
+	points = { { 0.15, 0 }, { 0.1, 1 } },
 })
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
@@ -340,54 +342,54 @@ hl.animation({ leaf = "workspaces", enabled = false, speed = 0, bezier = "ease" 
 hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 3, bezier = "easeOutQuint", style = "slidevert" })
 
 hl.config({
-    dwindle = {
-        preserve_split = true,
-        force_split = 2,
-    },
+	dwindle = {
+		preserve_split = true,
+		force_split = 2,
+	},
 })
 
 hl.config({
-    scrolling = {
-        column_width = 0.49,
-    },
+	scrolling = {
+		column_width = 0.49,
+	},
 })
 
 hl.config({
-    master = {
-        new_status = "master",
-    },
+	master = {
+		new_status = "master",
+	},
 })
 
 hl.config({
-    misc = {
-        disable_hyprland_logo = true,
-        disable_splash_rendering = true,
-        disable_scale_notification = true,
-        focus_on_activate = true,
-        anr_missed_pings = 3,
-        on_focus_under_fullscreen = 1,
-    },
+	misc = {
+		disable_hyprland_logo = true,
+		disable_splash_rendering = true,
+		disable_scale_notification = true,
+		focus_on_activate = true,
+		anr_missed_pings = 3,
+		on_focus_under_fullscreen = 1,
+	},
 })
 
 hl.config({
-    cursor = {
-        hide_on_key_press = true,
-        warp_on_change_workspace = 1,
-    },
+	cursor = {
+		hide_on_key_press = true,
+		warp_on_change_workspace = 1,
+	},
 })
 
 hl.config({
-    binds = {
-        hide_special_on_workspace_change = true,
-    },
+	binds = {
+		hide_special_on_workspace_change = true,
+	},
 })
 
 -- Autostart
 hl.on("hyprland.start", function()
-    hl.exec_cmd("mako")
-    hl.exec_cmd("waybar")
-    hl.exec_cmd("swaybg -i ~/.config/hypr/background.png -m fill")
-    hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
-    hl.exec_cmd("systemctl --user import-environment $(env | cut -d'=' -f 1)")
-    hl.exec_cmd("dbus-update-activation-environment --systemd --all")
+	hl.exec_cmd("mako")
+	hl.exec_cmd("waybar")
+	hl.exec_cmd("swaybg -i ~/.config/hypr/background.png -m fill")
+	hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+	hl.exec_cmd("systemctl --user import-environment $(env | cut -d'=' -f 1)")
+	hl.exec_cmd("dbus-update-activation-environment --systemd --all")
 end)

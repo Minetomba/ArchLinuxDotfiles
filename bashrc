@@ -11,5 +11,5 @@ PS1='[\u@\h \W]\$ '
 
 # Start hyprland after logging into TTY1
 if [ "$(tty)" = "/dev/tty1" ]; then
-        exec start-hyprland
+		exec start-hyprland
 fi
