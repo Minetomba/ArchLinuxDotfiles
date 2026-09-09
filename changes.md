@@ -1,2 +1,2 @@
-- Changed all indentation to be tabs.
-- Fixed the issue where mouse acceleration activated randomly, whereas now it is disabled completely.
+- Changed the emoji selector keybinding to "Super + E" rather than "Super + Ctrl + E", as it was more efficient.
+- Fixed the hardcoded keybinding menu to include the new keybindings added along the most recent releases.
