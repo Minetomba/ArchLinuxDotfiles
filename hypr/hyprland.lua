@@ -131,6 +131,7 @@ hl.bind("SUPER + ALT + 5", hl.dsp.group.next({ forward = false })) -- NOT WRITTE
 
 hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd("~/.config/waybar/scripts/main-menu.sh"))
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("wofi --show drun"))
+hl.bind("SUPER + R", hl.dsp.exec_cmd("~/.config/waybar/scripts/reminder.sh"))
 hl.bind("SUPER + Q", hl.dsp.exec_cmd("ghostty"))
 hl.bind("SUPER + CTRL + E", hl.dsp.exec_cmd("rofimoji --selector wofi --action print | tr -d '\n' | wl-copy"))
 hl.bind("XF86PowerOff", hl.dsp.exec_cmd("~/.config/waybar/scripts/power-menu.sh"), { locked = true })

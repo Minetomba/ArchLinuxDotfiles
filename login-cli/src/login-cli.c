@@ -20,6 +20,7 @@
 
 static void print_banner(void)
 {
+	sleep(1);
     printf(
         "\n\x1b[36mArch Linux\x1b[0m "
         "\x1b[32m(tty1)\x1b[0m\n\n"

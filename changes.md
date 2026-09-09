@@ -1,3 +1,3 @@
-- The timezone.sh script was requesting sudo password, and so now everything that uses it opens a terminal along with it.
-- Moved the timezone configuration option from the main menu to the settings menu.
-- Migrated rofi to wofi.
+- Added a "SUPER + R" keybinding to open the reminder menu quickly.
+- Fixed the bug where the startup text was showing over the login menu (now it waits 1 second before running).
+- Fixed the bugs where wofi was not showing the prompt text in the reminder menu.

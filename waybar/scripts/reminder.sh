@@ -6,15 +6,15 @@ fi
 sleep 0.1
 case "$action" in
     Set\ reminder)
-        time_=$(wofi --dmenu --prompt "Time (MMDDhhmm):" --lines 1)
+        time_=$(echo "" | wofi --show dmenu -p "Time (MMDDhhmm)" -D use_search_box=false --lines 1)
         if [ -z "$time_" ]; then
             exit 1
         fi
-        title=$(wofi --dmenu --prompt "Title" --lines 1)
+        title=$(echo "" | wofi --show dmenu -p "Title" -D use_search_box=false --lines 1)
         if [ -z "$title" ]; then
             exit 1
         fi
-        description=$(wofi --dmenu --prompt "Description" --lines 1)
+        description=$(echo "" | wofi --show dmenu -p "Description" -D use_search_box=false --lines 1)
         if [ -z "$description" ]; then
             exit 1
         fi
