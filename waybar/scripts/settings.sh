@@ -6,19 +6,19 @@ fi
 sleep 0.1
 case "$action" in
 	Wireguard\ Settings)
-		ghostty -e sudo vim /etc/wireguard/wg0.conf
+		ghostty -e sudo micro /etc/wireguard/wg0.conf
 	;;
 	Hyprland\ Settings)
-		ghostty -e vim ~/.config/hypr/hyprland.lua
+		ghostty -e micro ~/.config/hypr/hyprland.lua
 	;;
 	Hyprlock\ Settings)
-		ghostty -e vim ~/.config/hypr/hyprlock.conf
+		ghostty -e micro ~/.config/hypr/hyprlock.conf
 	;;
 	Mako\ Settings)
-		ghostty -e vim ~/.config/mako/config
+		ghostty -e micro ~/.config/mako/config
 	;;
 	Ghostty\ Settings)
-		ghostty -e vim ~/.config/ghostty/config.ghostty
+		ghostty -e micro ~/.config/ghostty/config.ghostty
 	;;
 	Wofi\ Settings)
 		notify-send "Settings" "Not implemented yet."

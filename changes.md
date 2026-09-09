@@ -1,2 +1,1 @@
-- Changed the emoji selector keybinding to "Super + E" rather than "Super + Ctrl + E", as it was more efficient.
-- Fixed the hardcoded keybinding menu to include the new keybindings added along the most recent releases.
+- Changed the default editor to "micro".

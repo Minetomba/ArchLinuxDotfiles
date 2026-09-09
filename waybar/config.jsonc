@@ -75,7 +75,7 @@
 	},
 	"custom/hyprsettings": {
 		"format": "Hyprland settings",
-		"on-click": "ghostty -e nano ~/.config/hypr/hyprland.lua"
+		"on-click": "ghostty -e micro ~/.config/hypr/hyprland.lua"
 	},
 	"custom/bluetooth": {
 		"format": "Bluetooth {}",

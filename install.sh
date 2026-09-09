@@ -4,7 +4,7 @@
 # Also, please run "sudo pacman -Syyu" before this and make sure you're connected to the internet
 
 # Install packages
-sudo pacman -S --needed python nano wofi file less gcc pam busctl curl ffmpeg pavucontrol vim git at hyprlock playerctl wf-recorder power-profiles-daemon swaybg bc nerd-fonts libnotify ttf-roboto iwd iw bluez bluez-utils pipewire wireplumber hyprland waybar mako polkit-gnome ghostty gnome-calculator fzf grim slurp wl-clipboard btop hyprpicker brightnessctl wireguard-tools pipewire-pulse pacman-contrib rofimoji
+sudo pacman -S --needed python nano wofi file less gcc pam busctl curl ffmpeg pavucontrol micro git at hyprlock playerctl wf-recorder power-profiles-daemon swaybg bc nerd-fonts libnotify ttf-roboto iwd iw bluez bluez-utils pipewire wireplumber hyprland waybar mako polkit-gnome ghostty gnome-calculator fzf grim slurp wl-clipboard btop hyprpicker brightnessctl wireguard-tools pipewire-pulse pacman-contrib rofimoji
 
 # Systemctl services
 sudo systemctl enable --now atd
@@ -15,8 +15,8 @@ systemctl --user enable --now pipewire pipewire-pulse
 # Make logind configuration
 sudo cp logind/logind.conf /etc/systemd/logind.conf
 
-# Make git use vim for everything
-git config --global core.editor vim
+# Make git use micro for everything
+git config --global core.editor micro
 
 # Make sure the waybar scripts are executable
 sudo chmod +x ./waybar/scripts/*
