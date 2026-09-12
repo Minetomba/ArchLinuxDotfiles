@@ -130,10 +130,11 @@ hl.bind("SUPER + ALT + 5", hl.dsp.group.next({ forward = false })) -- NOT WRITTE
 -- Utility Bindings
 
 hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd("~/.config/waybar/scripts/main-menu.sh"))
-hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("wofi --show drun"))
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("fuzzel --show drun"))
+hl.bind("SUPER + B", hl.dsp.exec_cmd("pkill swaybg || setsid -f swaybg -i ~/.config/hypr/background.png -m fill < /dev/null > /dev/null 2>&1"))
 hl.bind("SUPER + R", hl.dsp.exec_cmd("~/.config/waybar/scripts/reminder.sh"))
 hl.bind("SUPER + Q", hl.dsp.exec_cmd("ghostty"))
-hl.bind("SUPER + E", hl.dsp.exec_cmd("rofimoji --selector wofi --action print | tr -d '\n' | wl-copy"))
+hl.bind("SUPER + CTRL + E", hl.dsp.exec_cmd("rofimoji --selector fuzzel --action print | tr -d '\n' | wl-copy"))
 hl.bind("XF86PowerOff", hl.dsp.exec_cmd("~/.config/waybar/scripts/power-menu.sh"), { locked = true })
 
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("gnome-calculator"))
@@ -192,8 +193,6 @@ hl.config({
 		repeat_delay = 600,
 		numlock_by_default = true,
 		sensitivity = 0.4,
-		accel_profile = "flat",
-		force_no_accel = true,
 		touchpad = {
 			natural_scroll = true,
 			clickfinger_behavior = true,
@@ -230,9 +229,9 @@ hl.gesture({
 
 -- General Aesthetics
 
-local activeBorderColor = "rgba(0099ffaa) rgba(964b00aa) 45deg"
+local activeBorderColor = "rgba(ffffffaa) rgba(ffffffaa) 45deg"
 
-local inactiveBorderColor = "rgba(004d80aa) rgba(4b2600aa) 45deg"
+local inactiveBorderColor = "rgba(000000aa) rgba(000000aa) 45deg"
 
 hl.config({
 	general = {
@@ -243,8 +242,8 @@ hl.config({
 		allow_tearing = false,
 		layout = "dwindle",
 		col = {
-			active_border = { colors = { "rgba(0099ffaa)", "rgba(964b00aa)" }, angle = 45 },
-			inactive_border = { colors = { "rgba(004d80aa)", "rgba(4b2600aa)" }, angle = 45 },
+			active_border = { colors = { "rgba(ffffffaa)", "rgba(ffffffaa)" }, angle = 45 },
+			inactive_border = { colors = { "rgba(000000aa)", "rgba(000000aa)" }, angle = 45 },
 		},
 	},
 })

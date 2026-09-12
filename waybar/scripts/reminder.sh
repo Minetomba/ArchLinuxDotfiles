@@ -1,20 +1,20 @@
 #!/bin/bash
-action=$(echo -e "Set reminder\nRemove reminder" | wofi --dmenu --prompt "Action")
+action=$(echo -e "Set reminder\nRemove reminder" | fuzzel --dmenu --prompt "Action: ")
 if [ -z "$action" ]; then
 	exit 1
 fi
 sleep 0.1
 case "$action" in
 	Set\ reminder)
-		time_=$(echo "" | wofi --show dmenu -p "Time (MMDDhhmm)" -D use_search_box=false --lines 1)
+		time_=$(fuzzel --dmenu -p "Time (MMDDhhmm): ")
 		if [ -z "$time_" ]; then
 			exit 1
 		fi
-		title=$(echo "" | wofi --show dmenu -p "Title" -D use_search_box=false --lines 1)
+		title=$(fuzzel --dmenu -p "Title: ")
 		if [ -z "$title" ]; then
 			exit 1
 		fi
-		description=$(echo "" | wofi --show dmenu -p "Description" -D use_search_box=false --lines 1)
+		description=$(fuzzel --dmenu -p "Description: ")
 		if [ -z "$description" ]; then
 			exit 1
 		fi
@@ -26,7 +26,7 @@ case "$action" in
 			title=$(at -c "$id" | grep -oP 'notify-send\s+["'\'']\K[^"'\'']+' | head -n 1)
 			title=${title:-"No Title Found"}
 			echo "[$id] > $title"
-		done | wofi --dmenu --prompt "Select ID")
+		done | fuzzel --dmenu --prompt "Select ID")
 		if [ -n "$selection" ]; then
 			atrm "${selection%% *}"
 			notify-send "Reminders" "Reminder ${selection%% *} removed"

@@ -1,3 +1,3 @@
 #!/bin/bash
-timezone=$(timedatectl list-timezones | wofi --dmenu --prompt "Select Timezone")
+timezone=$(timedatectl list-timezones | fuzzel --dmenu --prompt "Select Timezone: ")
 [ -n "$timezone" ] && sudo timedatectl set-timezone "$timezone"

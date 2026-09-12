@@ -1,1 +1,12 @@
-- Changed the default editor to "micro".
+- Added a search among both installed and uninstalled packages of pacman to check where a command exists, when a command is not found.
+- Changed default editor back to vim and removed micro.
+- Wofi was replaced with fuzzel.
+- Set a default ghostty theme.
+- Changed the background from a mountain landscape to an extremely high-resolution photo of a sleeping gray wolf.
+- Added a "SUPER + B" keybind to toggle the background (thus allowing for quick background updates instead of logging out and back in).
+- Removed the hardcoded mouse acceleration disable setting (it did nothing other than make touchpad scrolling laggy and not work).
+- As the pacman search requires up-to-date packages, the default update script was changed to reflect that.
+- Changed waybar background opacity to 0.3 to align with ghostty's opacity.
+- Removed the "Keybindings" menu for complexity reasons.
+- Made the background selector less strict.
+- Added a "Toggle/Update Background" option in the trigger menu.

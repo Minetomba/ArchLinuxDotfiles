@@ -13,3 +13,8 @@ PS1='[\u@\h \W]\$ '
 if [ "$(tty)" = "/dev/tty1" ]; then
 		exec start-hyprland
 fi
+
+# Command not found
+command_not_found_handle() {
+	printf '%s\n' "$1" | xargs -r pacman -F
+}

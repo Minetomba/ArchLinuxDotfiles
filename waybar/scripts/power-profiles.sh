@@ -9,7 +9,7 @@ for profile in "${profiles[@]}"; do
 	fi
 done
 
-selected=$(printf "%s\n" "${options[@]}" | wofi --dmenu --prompt "Power Profile")
+selected=$(printf "%s\n" "${options[@]}" | fuzzel --dmenu --prompt "Power Profile: ")
 if [ -n "$selected" ]; then
 	profile=$(echo "$selected" | sed 's/^\[.\] //')
 	if [[ " ${profiles[@]} " =~ " $profile " ]]; then

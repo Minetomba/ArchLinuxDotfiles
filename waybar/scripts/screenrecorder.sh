@@ -4,7 +4,7 @@ if pgrep -x "wf-recorder" > /dev/null; then
 	notify-send "Screen Recording" "Recording stopped"
 	exit 0
 fi
-action=$(echo -e "Record region with Audio\nRecord region without Audio" | wofi --dmenu --prompt "Action")
+action=$(echo -e "Record region with Audio\nRecord region without Audio" | fuzzel --dmenu --prompt "Action: ")
 if [ -z "$action" ]; then
 	exit 1
 fi

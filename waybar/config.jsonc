@@ -67,7 +67,7 @@
 	},
 	"custom/apps": {
 		"format": "Apps",
-		"on-click": "wofi --show drun"
+		"on-click": "fuzzel --show drun"
 	},
 	"custom/btop": {
 		"format": "Open btop",
@@ -75,7 +75,7 @@
 	},
 	"custom/hyprsettings": {
 		"format": "Hyprland settings",
-		"on-click": "ghostty -e micro ~/.config/hypr/hyprland.lua"
+		"on-click": "ghostty -e vim ~/.config/hypr/hyprland.lua"
 	},
 	"custom/bluetooth": {
 		"format": "Bluetooth {}",
@@ -105,7 +105,7 @@
 		"format": "{}",
 		"exec": "checkupdates 2>/dev/null | grep -q . && echo \"Update\" || echo \"\"",
 		"interval": 60,
-		"on-click": "ghostty -e sudo pacman -Syyu"
+		"on-click": "ghostty -e ~/.config/waybar/scripts/update.sh"
 	},
 
 	// Center Module

@@ -1,2 +1,17 @@
 background-opacity = 0.3
 font-size = 10
+foreground = #ffffff
+background = #000000
+bold-is-bright = true
+palette = 1=#ff0000
+palette = 2=#00ff00
+palette = 3=#ffff00
+palette = 4=#0000ff
+palette = 5=#ff00ff
+palette = 6=#00ffff
+palette = 9=#ff5555
+palette = 10=#55ff55
+palette = 11=#ffff55
+palette = 12=#5555ff
+palette = 13=#ff55ff
+palette = 14=#55ffff

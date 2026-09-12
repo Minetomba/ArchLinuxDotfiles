@@ -1,5 +1,5 @@
 #!/bin/bash
-action=$(echo -e "Lock\nLog out\nReboot\nPower off" | wofi --dmenu --prompt "Action")
+action=$(echo -e "Lock\nLog out\nReboot\nPower off" | fuzzel --dmenu --prompt "Action: ")
 if [ -z "$action" ]; then
 	exit 1
 fi
