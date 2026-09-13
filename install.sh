@@ -1,9 +1,7 @@
 #!/bin/bash
 # SPDX-FileCopyrightText: 2026 Minetomba <minetomba@proton.me>
 # SPDX-License-Identifier: GPL-3.0-only
-# Once you have a minimal arch linux installation with sudo, systemd, a sudo user, base, base-devel, bash and up-to-date mirrors, you can proceed with this script
-# This assumes you are in the directory of this... Wherever it is. Hence why it's using sudo for practically everything because it might be in an USB environment where sudo is required for every file movement. Better safe than crash.
-# Also, please run "sudo pacman -Syyu" before this and make sure you're connected to the internet
+# This assumes you are in the directory of this... Wherever it is. Hence why it's using sudo for practically everything because it might be in an USB environment where sudo is required for every file movement.
 
 # Install packages
 sudo pacman -S --needed python musl systemd-resolvconf nano fuzzel file less gcc pam busctl curl ffmpeg pavucontrol vim git at hyprlock playerctl wf-recorder power-profiles-daemon swaybg bc nerd-fonts libnotify ttf-roboto iwd iw bluez bluez-utils pipewire wireplumber hyprland waybar mako polkit-gnome ghostty gnome-calculator fzf grim slurp wl-clipboard btop hyprpicker brightnessctl wireguard-tools pipewire-pulse pacman-contrib rofimoji
