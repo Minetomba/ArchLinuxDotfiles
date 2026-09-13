@@ -8,6 +8,6 @@ fi
 sleep 0.1
 case "$action" in
 	Pacman\ Packages)
-		pacman -Ssq | fuzzel --dmenu --prompt "Packages" | xargs -r -o sudo pacman -S
+		pacman -Ssq | fuzzel --dmenu --prompt "Packages: " | xargs -r -o sudo pacman -S
 	;;
 esac
