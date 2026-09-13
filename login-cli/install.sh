@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: 2026 Minetomba <minetomba@proton.me>
+# SPDX-License-Identifier: GPL-3.0-only
 echo "Installing login-cli..."
 sudo install -Dm755 bin/login-cli /usr/local/bin/login-cli
 sudo install -Dm644 src/login-cli@.service /etc/systemd/system/login-cli@.service

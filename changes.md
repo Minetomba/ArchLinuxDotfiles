@@ -1,1 +1,0 @@
-- Removed the login-cli binary file.

@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: 2026 Minetomba <minetomba@proton.me>
+# SPDX-License-Identifier: GPL-3.0-only
 action=$(echo -e "Set reminder\nRemove reminder" | fuzzel --dmenu --prompt "Action: ")
 if [ -z "$action" ]; then
 	exit 1

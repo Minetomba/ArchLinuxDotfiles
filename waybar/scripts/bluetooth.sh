@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: 2026 Minetomba <minetomba@proton.me>
+# SPDX-License-Identifier: GPL-3.0-only
 if pgrep -f "$HOME/.config/waybar/scripts/bluetooth.sh" | grep -v $$ > /dev/null; then
 	echo "Another instance of bluetooth.sh is already running."
 	exit 1

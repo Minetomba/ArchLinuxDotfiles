@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: 2026 Minetomba <minetomba@proton.me>
+# SPDX-License-Identifier: GPL-3.0-only
 mapfile -t devices < <(
 	for d in /sys/class/net/*; do
 		[ -d "$d/wireless" ] && basename "$d"

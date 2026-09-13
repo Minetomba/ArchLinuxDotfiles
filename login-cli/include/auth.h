@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2026 Minetomba <minetomba@proton.me>
+// SPDX-License-Identifier: GPL-3.0-only
 #ifndef LOGIN_CLI_AUTH_H
 #define LOGIN_CLI_AUTH_H
 

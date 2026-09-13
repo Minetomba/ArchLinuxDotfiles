@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: 2026 Minetomba <minetomba@proton.me>
+# SPDX-License-Identifier: GPL-3.0-only
 # Once you have a minimal arch linux installation with sudo, systemd, a sudo user, base, base-devel, bash and up-to-date mirrors, you can proceed with this script
 # This assumes you are in the directory of this... Wherever it is. Hence why it's using sudo for practically everything because it might be in an USB environment where sudo is required for every file movement. Better safe than crash.
 # Also, please run "sudo pacman -Syyu" before this and make sure you're connected to the internet

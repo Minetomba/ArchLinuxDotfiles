@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: 2026 Minetomba <minetomba@proton.me>
+# SPDX-License-Identifier: GPL-3.0-only
 if pgrep -x "wf-recorder" > /dev/null; then
 	pkill wf-recorder
 	notify-send "Screen Recording" "Recording stopped"
