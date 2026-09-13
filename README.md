@@ -11,7 +11,7 @@ Now you can run the script from the root of this repository.
 ```bash
 ./install.sh
 ```
-Then you can just do a reboot and you should get booted into the login interface of Getty on TTY1.
+Then you can just do a reboot and you should get booted into the login interface of getty on TTY1.
 ```bash
 reboot
 ```
