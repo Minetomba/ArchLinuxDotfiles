@@ -51,9 +51,5 @@ sudo -E chown -R "$USER:$USER" "$HOME"
 # Get in the "input" group
 sudo usermod -a -G input $USER
 
-# Install the login manager
-cd login-cli
-./compile.sh
-./install.sh
-
+# Display the final message
 echo "Install complete!"
