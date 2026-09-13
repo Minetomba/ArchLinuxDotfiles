@@ -1,3 +1,6 @@
+## Arch Linux Dotfiles
+My arch linux configuration made to look as beautiful as possible (in my opinion). Since it's my daily driver, new features and bug fixes will constantly be added.
+
 ## Installation process
 To install this configuration, you will need a minimal arch linux installation with sudo, systemd, a sudo user, base, base-devel, networking, bash and up-to-date mirrors. It would be preferred to have been done with archinstall, as that is what the configuration was tested on.
 First, it's recommended to do a system update.
