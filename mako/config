@@ -2,11 +2,15 @@ anchor=top-right
 default-timeout=5000
 width=300
 height=100
-background-color=#00000080
+
+background-color=#1e1e2eff
 text-color=#ffffffff
 border-size=2
-border-color=#ffffffff
-font=Noto Sans 10
-border-radius=0
+border-color=#5e81acff
+border-radius=8
+
+font=monospace 10
+margin=10
+padding=0
 max-visible=5
-progress-color=#000000
+progress-color=#5e81acff
