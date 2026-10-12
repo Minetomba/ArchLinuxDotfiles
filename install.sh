@@ -4,7 +4,7 @@
 # This assumes you are in the directory of this... Wherever it is. Hence why it's using sudo for practically everything because it might be in an USB environment where sudo is required for every file movement.
 
 # Install packages
-sudo pacman -S --needed python musl systemd-resolvconf nano fuzzel file less gcc pam busctl curl ffmpeg pavucontrol vim git at hyprlock playerctl wf-recorder power-profiles-daemon swaybg bc nerd-fonts libnotify ttf-roboto iwd iw bluez bluez-utils pipewire wireplumber hyprland waybar mako polkit-gnome ghostty gnome-calculator fzf grim slurp wl-clipboard btop hyprpicker brightnessctl wireguard-tools pipewire-pulse pacman-contrib rofimoji
+sudo pacman -S --needed python musl systemd systemd-resolvconf nano fuzzel file less gcc pam curl ffmpeg pavucontrol vim git at hyprlock playerctl wf-recorder power-profiles-daemon swaybg bc nerd-fonts libnotify ttf-roboto iwd iw bluez bluez-utils pipewire wireplumber hyprland waybar mako polkit-gnome ghostty gnome-calculator fzf grim slurp wl-clipboard btop hyprpicker brightnessctl wireguard-tools pipewire-pulse pacman-contrib rofimoji
 
 # Systemctl services
 sudo systemctl enable --now atd
