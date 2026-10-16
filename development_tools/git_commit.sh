@@ -1,3 +1,3 @@
 #!/bin/bash
 git add ..
-git commit -m "v$1"
+git commit -m "$1"
