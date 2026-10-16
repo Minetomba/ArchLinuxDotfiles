@@ -197,6 +197,7 @@ hl.config({
 			natural_scroll = true,
 			clickfinger_behavior = true,
 			scroll_factor = 0.4,
+			disable_while_typing = false,
 		},
 	},
 })
@@ -343,7 +344,7 @@ hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 3, bezier = "e
 hl.config({
 	dwindle = {
 		preserve_split = true,
-		force_split = 2,
+		force_split = 0,
 	},
 })
 
